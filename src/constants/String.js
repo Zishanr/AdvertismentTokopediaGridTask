@@ -1,6 +1,3 @@
 module.exports = {
-    NUMBER : 'number',
-    DELETE : 'delete',
-    OPERATOR : 'operator',
-
+    LOAD_DATA : 'Load Data',
 }

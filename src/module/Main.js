@@ -3,9 +3,10 @@ import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-
 import Style from './Style';
 import CommonGridBox from './common/CommonGridBox';
 
-const MAX_ELEMENTS_TO_SHOW = 8;
 let CURRENT_ELEMENT_INDEX = 0;
+const MAX_ELEMENTS_TO_SHOW = 8;
 const MASTER_DATA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+const GLOBAL_STRING = require('../../src/constants/String');
 
 class Main extends Component {
     constructor(props) {
@@ -41,7 +42,7 @@ class Main extends Component {
             elementsToShow.push(MASTER_DATA[CURRENT_ELEMENT_INDEX++]);
         }
 
-        elementsToShow.push('Load Data');
+        elementsToShow.push(GLOBAL_STRING.LOAD_DATA);
         this.setState({ ItemsToShow: elementsToShow });
     }
 
@@ -64,8 +65,6 @@ class Main extends Component {
         this._loadData();
     }
 }
-
-
 
 export default Main;
 

@@ -5,6 +5,7 @@ const GLOBAL_COLORS = require('../constants/Colors');
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height -50;
 const MARGIN = 5;
+const GLOBAL_COLOR = require('../../src/constants/Colors');
 
 
 export default Styles = StyleSheet.create(
@@ -20,12 +21,11 @@ export default Styles = StyleSheet.create(
             height: (HEIGHT/3) - MARGIN,
             width : (WIDTH/3) - MARGIN,
             margin: MARGIN,
-            backgroundColor: '#00BCD4'
+            backgroundColor: GLOBAL_COLOR.BUTTON_COLOR
 
         },
         GridViewInsideTextItemStyle: {
-
-            color: '#fff',
+            color: GLOBAL_COLOR.WHITE,
             padding: 10,
             fontSize: 18,
             justifyContent: 'center',
